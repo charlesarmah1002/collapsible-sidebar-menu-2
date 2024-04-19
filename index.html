@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collapsible-sidebar</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <main>
+        <aside class="">
+            <a href="" class="logo">
+                <img src="ObsidianOrderLogo.png" alt="Obsidian Order">
+                <span>Obsidian Order</span>
+            </a>
+            
+            <ul id="menu">
+                <li class="active"><a href="#"><i class="ri-dashboard-line"></i><span>Dashboard</span></a></li>
+                <li><a href="#"><i class="ri-news-line"></i><span>Blog Posts</span></a></li>
+                <li><a href="#"><i class="ri-feedback-line"></i><span>Feedback</span></a></li>
+                <li><a href="#"><i class="ri-settings-2-line"></i><span>Settings</span></a></li>
+            </ul>
+
+            <div class="collapse">
+                <button id="collapse-sidebar"></button>
+            </div>
+        </aside>
+        <div id="container">
+            <header>
+                <nav class="primary-navigation">
+                    <h2>Dashboard</h2>
+                    <ul class="actions">
+                        <li><a href="#"><i class="ri-search-line"></i></a></li>
+                        <li><a href="#"><i class="ri-notification-3-line"></i></a></li>
+                        <li><a href="#" class="btn"><i class="ri-add-line"></i><span>New Post</span></a></li>
+                        <li><a href="#" class="profile-image"><i class="ri-user-line"></i></a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div id="content">
+
+            </div>
+        </div>
+    </main>
+
+    <!-- script -->
+    <script src="script.js"></script>
+</body>
+</html>

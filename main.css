@@ -1,0 +1,239 @@
+:root {
+    --background-color : #FBFBFB;
+    --blue : #0770E9;
+    --red : #E90707;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins, sans-serif;
+    transition: 0.3s;
+}
+
+body {
+    background: var(--background-color);
+    width: 100vw;
+    height: 100dvh;
+    overflow: hidden;
+    padding: 15px;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    border-radius: 10px;
+}
+
+main aside {
+    float: left;
+    height: 100%;
+    background: var(--blue);
+    width: 250px;
+    /* padding: 15px; */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color: white;
+    border-radius: 10px;
+    position: relative;
+}
+
+main aside .logo {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    gap: 5px;
+    margin: 15px;
+}
+
+main aside .logo img {
+    /* height: 70px; */
+    height: 100%;
+    aspect-ratio: 1;
+}
+
+main aside #menu {
+    list-style: none;
+    display: grid;
+    grid-template-columns: auto;
+    gap: 10px;
+    margin-left: 15px;
+    width: 100%;
+}
+
+main aside #menu li {
+    height: 55px;
+    padding-inline-start: 10px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    border-radius: 5px;
+}
+
+main aside #menu li:hover,
+main aside #menu li.active {
+    color: var(--blue);
+    background: var(--background-color);
+}
+
+main aside #menu li a {
+    text-decoration: none;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+    color: inherit;
+}
+
+/* main aside #menu li:hover::after,
+main aside #menu li.active::after {
+    content: '';
+    background: var(--background-color);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right: -15px;
+    z-index: 0;
+} */
+
+main aside #menu li a i {
+    font-size: 24px;
+}
+
+main aside .collapse {
+    position: absolute;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: -10px;
+}
+
+main aside .collapse button {
+    width: 7px;
+    height: 50px;
+    background: #707070;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+main aside .collapse button:hover {
+    height: 70px;
+}
+
+main aside.active {
+    width: 70px;
+    /* padding: 10px; */
+}
+
+main aside.active a.logo {
+    border-radius: 50%;
+    /* width: 100%; */
+    /* width: 50px; */
+    aspect-ratio: 1;
+    overflow: hidden;
+}
+
+main aside.active a.logo span {
+    opacity: 0;
+    display: none;
+}
+
+main aside.active a.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+main aside.active #menu span {
+    display: none;
+}
+
+main #container {
+    flex: 1 0 250px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* padding: 10px; */
+    gap: 17px;
+}
+
+main #container header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+}
+
+main #container header .primary-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+main #container header .primary-navigation .actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    gap: 15px;
+}
+
+main #container header .primary-navigation .actions i {
+    font-size: 22px;
+}
+
+main #container header .primary-navigation .actions a {
+    color: inherit;
+    text-decoration: none;
+}
+
+main #container header .primary-navigation .actions a.btn {
+    border: 1px solid;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    height: 40px;
+    width: 150px;
+}
+
+main #container header .primary-navigation .actions a.btn span {
+    letter-spacing: 1px;
+}
+
+main #container header .primary-navigation .actions a.profile-image {
+    border-radius: 50%;
+    border: 1px solid;
+    height: 40px;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main #container #content {
+    /* border: 1px solid red; */
+    height: 100%;
+    background: white;
+    box-shadow: 1px 1px 10px #00000016;
+    border-radius: 10px;
+}
